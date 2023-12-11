@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataDiriActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/lokasimeja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Lokasi meja" />
+
+            <TextView
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lokasimeja"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="meja"
+                android:textAllCaps="true"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/orange">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imagelogin"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login"/>
+        <LinearLayout
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:layout_below="@id/imagelogin"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Input Data diri"
+                android:textSize="20dp"
+                android:layout_marginEnd="20dp"
+                android:textAlignment="center"
+                android:layout_marginStart="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/editnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/judul"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp">
+            <EditText
+                android:id="@+id/edname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:background="@drawable/raunded_white"
+                android:hint="Name"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:autoSizeTextType="uniform"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/editemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/editnama"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="10dp">
+            <EditText
+                android:id="@+id/edmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/raunded_white"
+                android:hint="Email"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:text="simpan"
+            android:id="@+id/btnsimpan"
+            android:background="@drawable/raunded"
+            android:layout_below="@+id/editemail"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+</RelativeLayout>
